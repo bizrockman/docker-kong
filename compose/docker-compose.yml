@@ -128,4 +128,4 @@ services:
 
 secrets:
   kong_postgres_password:
-    file: /compose/POSTGRES_PASSWORD
+    file: ./POSTGRES_PASSWORD
