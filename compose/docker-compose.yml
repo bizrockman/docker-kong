@@ -128,4 +128,4 @@ services:
 
 secrets:
   kong_postgres_password:
-    file: ./POSTGRES_PASSWORD
+    file: /artifacts/u8k4c4sokw8w04www4c8kkwk/compose/POSTGRES_PASSWORD
