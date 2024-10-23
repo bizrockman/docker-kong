@@ -1,7 +1,6 @@
 version: '3.9'
 
-x-kong-config:
-  &kong-env
+x-kong-config: &kong-env
   KONG_DATABASE: ${KONG_DATABASE:-off}
   KONG_PG_DATABASE: ${KONG_PG_DATABASE:-kong}
   KONG_PG_HOST: db
@@ -91,7 +90,7 @@ services:
     restart: on-failure:5
     read_only: true
     volumes:
-      - kong_prefix_vol:${KONG_PREFIX:-/var/run/kong}
+      - kong_prefix_vol:$${KONG_PREFIX:-/var/run/kong}
       - kong_tmp_vol:/tmp
       - ./config:/opt/kong
     security_opt:
